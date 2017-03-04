@@ -16,7 +16,8 @@
 - アクターが子供のアクターを作り、それぞれにラウンドロビンでメッセージをブロードキャストしたりすることもできる
 
 ![ActorModel](http://blog.scottlogic.com/rdoyle/assets/ActorModel.png)
-source : http://blog.scottlogic.com/2014/08/15/using-akka-and-scala-to-render-a-mandelbrot-set.html
+
+[Using Akka and Scala to Render a Mandelbrot Set](http://blog.scottlogic.com/2014/08/15/using-akka-and-scala-to-render-a-mandelbrot-set.html)
 
 #### pros
 - 並行プログラミングが簡単にできる
