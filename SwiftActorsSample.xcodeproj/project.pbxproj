@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EE158F21E6A5E9800CBA3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE158F11E6A5E9800CBA3F6 /* Assets.xcassets */; };
+		1EE158F41E6A5EC000CBA3F6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EE158F31E6A5EC000CBA3F6 /* Info.plist */; };
 		500DA24777BF3C2B6C783D2B /* Pods_SwiftActorsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE16776314D7607A827137A /* Pods_SwiftActorsSample.framework */; };
 		909173061498C3FADC915078 /* Pods_SwiftActorsSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F2267A3B0F9FCE5BB959D9 /* Pods_SwiftActorsSampleUITests.framework */; };
 		A70900BF1E6A5134008DB48D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70900BE1E6A5134008DB48D /* AppDelegate.swift */; };
 		A70900C41E6A5134008DB48D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70900C21E6A5134008DB48D /* Main.storyboard */; };
 		A70900C71E6A5134008DB48D /* SwiftActorsSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A70900C51E6A5134008DB48D /* SwiftActorsSample.xcdatamodeld */; };
-		A70900C91E6A5134008DB48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70900C81E6A5134008DB48D /* Assets.xcassets */; };
 		A70900CC1E6A5134008DB48D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70900CA1E6A5134008DB48D /* LaunchScreen.storyboard */; };
 		A70900D71E6A5134008DB48D /* SwiftActorsSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70900D61E6A5134008DB48D /* SwiftActorsSampleTests.swift */; };
 		A70900E21E6A5134008DB48D /* SwiftActorsSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70900E11E6A5134008DB48D /* SwiftActorsSampleUITests.swift */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		138B2A5F215710E0E0CBB15E /* Pods-SwiftActorsSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftActorsSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftActorsSampleTests/Pods-SwiftActorsSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		164F433FD0B251475B98C78B /* Pods-SwiftActorsSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftActorsSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftActorsSampleUITests/Pods-SwiftActorsSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1EE158F11E6A5E9800CBA3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SwiftActorsSample/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		1EE158F31E6A5EC000CBA3F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SwiftActorsSample/Info.plist; sourceTree = SOURCE_ROOT; };
 		2E11E06A550CF83CF00A69DC /* Pods-SwiftActorsSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftActorsSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftActorsSampleTests/Pods-SwiftActorsSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		35E31549F32EA66D9929784B /* Pods_SwiftActorsSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftActorsSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60016C08388614B4F47B4A7C /* Pods-SwiftActorsSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftActorsSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftActorsSampleUITests/Pods-SwiftActorsSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,9 +51,7 @@
 		A70900BE1E6A5134008DB48D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70900C31E6A5134008DB48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A70900C61E6A5134008DB48D /* SwiftActorsSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftActorsSample.xcdatamodel; sourceTree = "<group>"; };
-		A70900C81E6A5134008DB48D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A70900CB1E6A5134008DB48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A70900CD1E6A5134008DB48D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		A70900D21E6A5134008DB48D /* SwiftActorsSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftActorsSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70900D61E6A5134008DB48D /* SwiftActorsSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftActorsSampleTests.swift; sourceTree = "<group>"; };
 		A70900D81E6A5134008DB48D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,8 +195,8 @@
 		A70900F41E6A5493008DB48D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				A70900C81E6A5134008DB48D /* Assets.xcassets */,
-				A70900CD1E6A5134008DB48D /* Info.plist */,
+				1EE158F31E6A5EC000CBA3F6 /* Info.plist */,
+				1EE158F11E6A5E9800CBA3F6 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -327,8 +328,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE158F41E6A5EC000CBA3F6 /* Info.plist in Resources */,
 				A70900CC1E6A5134008DB48D /* LaunchScreen.storyboard in Resources */,
-				A70900C91E6A5134008DB48D /* Assets.xcassets in Resources */,
+				1EE158F21E6A5E9800CBA3F6 /* Assets.xcassets in Resources */,
 				A70900C41E6A5134008DB48D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
