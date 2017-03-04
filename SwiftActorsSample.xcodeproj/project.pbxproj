@@ -116,6 +116,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1EF265F61E6A879600B3FCFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EF265FA1E6A87F700B3FCFC /* Manager */,
+				1EF265F91E6A87E000B3FCFC /* Entity */,
+				1EF265F81E6A87C100B3FCFC /* Fetcher */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EF265F81E6A87C100B3FCFC /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fetcher;
+			sourceTree = "<group>";
+		};
+		1EF265F91E6A87E000B3FCFC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1EF265FA1E6A87F700B3FCFC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		28E461792F7F6E06FBF16322 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +185,7 @@
 		A70900BD1E6A5134008DB48D /* SwiftActorsSample */ = {
 			isa = PBXGroup;
 			children = (
+				1EF265F61E6A879600B3FCFC /* Model */,
 				A73FCAEF1E6A623A00472ABF /* Common */,
 				A70900F41E6A5493008DB48D /* Resource */,
 				A70900F11E6A5189008DB48D /* ViewController */,
