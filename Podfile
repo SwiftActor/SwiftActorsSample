@@ -7,6 +7,7 @@ target 'SwiftActorsSample' do
 
   # Pods for SwiftActorsSample
   pod "Himotoki", "~> 3.0"
+  pod 'R.swift'
 
   target 'SwiftActorsSampleTests' do
     inherit! :search_paths

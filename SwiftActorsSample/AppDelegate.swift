@@ -17,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        guard let window = self.window else {
+            // FIXME send firebase error report
+            return false
+        }
+        
+        guard let mainViewController = R.storyboard.main.instantiateInitialViewController() else {
+            // FIXME send firebase error report
+            return false
+        }
+        
+        window.rootViewController = mainViewController
+        
+        window.makeKeyAndVisible()
+        
         return true
     }
 
