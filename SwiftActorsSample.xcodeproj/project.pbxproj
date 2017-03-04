@@ -185,6 +185,9 @@
 		A70900EF1E6A5156008DB48D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A7A5E0B31E6A81080045DBA3 /* Manager */,
+				A7A5E0B21E6A80F20045DBA3 /* Fetcher */,
+				A7A5E0B11E6A80DB0045DBA3 /* Entity */,
 				A70900C51E6A5134008DB48D /* SwiftActorsSample.xcdatamodeld */,
 			);
 			path = Model;
@@ -284,6 +287,27 @@
 				A73FCB111E6A6E0E00472ABF /* WeatherViewController.swift */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		A7A5E0B11E6A80DB0045DBA3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A7A5E0B21E6A80F20045DBA3 /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fetcher;
+			sourceTree = "<group>";
+		};
+		A7A5E0B31E6A81080045DBA3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
