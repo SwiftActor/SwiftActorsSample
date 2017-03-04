@@ -1,12 +1,18 @@
 PODS:
   - Himotoki (3.0.1)
+  - R.swift (3.2.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
 
 DEPENDENCIES:
   - Himotoki (~> 3.0)
+  - R.swift
 
 SPEC CHECKSUMS:
   Himotoki: 85fda41d4d0e14f7228317a3b474175cdfb8f515
+  R.swift: 207a372a2b5977caef440c696a368009460641d1
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
 
-PODFILE CHECKSUM: 76b988aedb47dda460034066129c75b195f91c1b
+PODFILE CHECKSUM: 02e2ec7373d7b28c8e12c735c07886ec5b5370fb
 
 COCOAPODS: 1.2.0
