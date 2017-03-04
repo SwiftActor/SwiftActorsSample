@@ -21,20 +21,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-Mv-0k5">
-                                <rect key="frame" x="155.5" y="323" width="64.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lPV-9k-ptZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3zt-Mv-0k5" firstAttribute="centerY" secondItem="vl2-IX-D7b" secondAttribute="centerY" id="M7k-m1-kpe"/>
-                            <constraint firstItem="3zt-Mv-0k5" firstAttribute="centerX" secondItem="vl2-IX-D7b" secondAttribute="centerX" id="N0e-YE-c3s"/>
+                            <constraint firstAttribute="trailing" secondItem="lPV-9k-ptZ" secondAttribute="trailing" id="HpN-YX-G35"/>
+                            <constraint firstItem="lPV-9k-ptZ" firstAttribute="top" secondItem="vl2-IX-D7b" secondAttribute="top" id="IK3-b7-Rjn"/>
+                            <constraint firstAttribute="bottom" secondItem="lPV-9k-ptZ" secondAttribute="bottom" id="fDk-0y-kVD"/>
+                            <constraint firstItem="lPV-9k-ptZ" firstAttribute="leading" secondItem="vl2-IX-D7b" secondAttribute="leading" id="pSk-e0-ytF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tRf-26-smP"/>
+                    <connections>
+                        <outlet property="tableView" destination="lPV-9k-ptZ" id="Ckq-qx-xud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRP-as-mdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

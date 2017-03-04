@@ -1,18 +1,28 @@
 PODS:
+  - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
   - Himotoki (3.0.1)
   - Keys (1.0.0)
+  - ObjectMapper (2.2.5)
   - R.swift (3.2.0):
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
   - SwiftActor (0.0.1)
-  - SwiftActors (0.0.1)
+  - SwiftActors (0.1.0)
+  - SwiftTask (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
   - Himotoki (~> 3.0)
   - Keys (from `Pods/CocoaPodsKeys`)
+  - ObjectMapper
   - R.swift
   - SwiftActor (from `https://github.com/SwiftActor/SwiftActor`)
   - SwiftActors (from `https://github.com/applideveloper/SwiftActors`)
+  - SwiftTask (from `https://github.com/ReactKit/SwiftTask`, branch `swift/3.0`)
 
 EXTERNAL SOURCES:
   Keys:
@@ -21,23 +31,33 @@ EXTERNAL SOURCES:
     :git: https://github.com/SwiftActor/SwiftActor
   SwiftActors:
     :git: https://github.com/applideveloper/SwiftActors
+  SwiftTask:
+    :branch: swift/3.0
+    :git: https://github.com/ReactKit/SwiftTask
 
 CHECKOUT OPTIONS:
   SwiftActor:
-    :commit: 1a86b7646b826fc49b85b428e964da5e567d4e58
+    :commit: b1feb1eff8c671a5d7653179130b3876a9d6f7d9
     :git: https://github.com/SwiftActor/SwiftActor
   SwiftActors:
-    :commit: dcf4492622e3b5466a057a5a2af866e8581d2459
+    :commit: 77c94347c0993c6722873a0740e22245cb7de6b2
     :git: https://github.com/applideveloper/SwiftActors
+  SwiftTask:
+    :commit: 98f89883509d27229d60ff3f2ececdd82a46d674
+    :git: https://github.com/ReactKit/SwiftTask
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   Himotoki: 85fda41d4d0e14f7228317a3b474175cdfb8f515
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
   R.swift: 207a372a2b5977caef440c696a368009460641d1
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   SwiftActor: 990c89af36de9dffe486f605bfeb509aea79963c
-  SwiftActors: 6672717bfbf0e351b1ec038e2dacddf481bf441a
+  SwiftActors: e9206993010301850ccfb2382c768c83fc491420
+  SwiftTask: 7fcd92f8ac16876e82c0e4ced0cea7e028456b6b
 
-PODFILE CHECKSUM: 210f253fd93b4789b202aa30244401f448a54a32
+PODFILE CHECKSUM: 3b3f89dd2219ce4277a877438e3ecdcf586fdbef
 
 COCOAPODS: 1.2.0
