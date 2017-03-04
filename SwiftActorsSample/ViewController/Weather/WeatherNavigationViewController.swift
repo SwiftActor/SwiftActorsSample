@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  WeatherNavigationViewController.swift
 //  SwiftActorsSample
 //
 //  Created by 荒木敦 on 2017/03/04.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class WeatherNavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 
     /*

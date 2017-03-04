@@ -23,12 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-        guard let mainViewController = R.storyboard.main.instantiateInitialViewController() else {
+        guard let mainTabBarViewController = R.storyboard.mainTabBarStoryboard.instantiateInitialViewController() else {
             // FIXME send firebase error report
             return false
         }
-        
-        window.rootViewController = mainViewController
+
+        window.rootViewController = mainTabBarViewController
         
         window.makeKeyAndVisible()
         

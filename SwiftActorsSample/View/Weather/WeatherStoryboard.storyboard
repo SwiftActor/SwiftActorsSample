@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vFC-zY-kfd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="hDc-h4-tzC">
+            <objects>
+                <viewController id="2EE-xq-sQz" customClass="WeatherViewController" customModule="SwiftActorsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Qf-Ua-XvZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0E1-5I-IHq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vl2-IX-D7b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-Mv-0k5">
+                                <rect key="frame" x="155.5" y="323" width="64.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3zt-Mv-0k5" firstAttribute="centerY" secondItem="vl2-IX-D7b" secondAttribute="centerY" id="M7k-m1-kpe"/>
+                            <constraint firstItem="3zt-Mv-0k5" firstAttribute="centerX" secondItem="vl2-IX-D7b" secondAttribute="centerX" id="N0e-YE-c3s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tRf-26-smP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRP-as-mdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="133.5832083958021"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="Ek8-am-oSm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vFC-zY-kfd" customClass="WeatherNavigationViewController" customModule="SwiftActorsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weather" image="ic_wb_cloudy_18pt" id="T2z-XD-vmp"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PhY-CV-PTB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2EE-xq-sQz" kind="relationship" relationship="rootViewController" id="vmn-bA-rti"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nm8-KM-kAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_wb_cloudy_18pt" width="18" height="18"/>
+    </resources>
+</document>

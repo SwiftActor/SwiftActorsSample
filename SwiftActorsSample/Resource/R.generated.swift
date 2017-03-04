@@ -40,8 +40,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
+    /// Image `ic_wb_cloudy_18pt`.
+    static let ic_wb_cloudy_18pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_wb_cloudy_18pt")
+    
+    /// `UIImage(named: "ic_wb_cloudy_18pt", bundle: ..., traitCollection: ...)`
+    static func ic_wb_cloudy_18pt(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_wb_cloudy_18pt, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -60,12 +68,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
+    /// Storyboard `MainTabBarStoryboard`.
+    static let mainTabBarStoryboard = _R.storyboard.mainTabBarStoryboard()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `WeatherStoryboard`.
+    static let weatherStoryboard = _R.storyboard.weatherStoryboard()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -75,6 +87,16 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    
+    /// `UIStoryboard(name: "MainTabBarStoryboard", bundle: ...)`
+    static func mainTabBarStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.mainTabBarStoryboard)
+    }
+    
+    /// `UIStoryboard(name: "WeatherStoryboard", bundle: ...)`
+    static func weatherStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.weatherStoryboard)
     }
     
     fileprivate init() {}
@@ -87,7 +109,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -98,12 +120,21 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try storyboard.validate()
+  }
+  
   struct nib {
     fileprivate init() {}
   }
   
-  struct storyboard {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try mainTabBarStoryboard.validate()
+      try weatherStoryboard.validate()
+    }
+    
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
@@ -118,6 +149,37 @@ struct _R {
       
       let bundle = R.hostingBundle
       let name = "Main"
+      
+      fileprivate init() {}
+    }
+    
+    struct mainTabBarStoryboard: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = MainTabBarViewController
+      
+      let bundle = R.hostingBundle
+      let mainTabBarViewController = StoryboardViewControllerResource<MainTabBarViewController>(identifier: "MainTabBarViewController")
+      let name = "MainTabBarStoryboard"
+      
+      func mainTabBarViewController(_: Void = ()) -> MainTabBarViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: mainTabBarViewController)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.mainTabBarStoryboard().mainTabBarViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarViewController' could not be loaded from storyboard 'MainTabBarStoryboard' as 'MainTabBarViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct weatherStoryboard: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = WeatherNavigationViewController
+      
+      let bundle = R.hostingBundle
+      let name = "WeatherStoryboard"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "ic_wb_cloudy_18pt") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_wb_cloudy_18pt' is used in storyboard 'WeatherStoryboard', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
