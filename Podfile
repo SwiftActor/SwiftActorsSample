@@ -9,6 +9,7 @@ target 'SwiftActorsSample' do
   pod "Himotoki", "~> 3.0"
   pod 'R.swift'
   pod "SwiftActor", :git => "https://github.com/SwiftActor/SwiftActor"
+  pod "SwiftActors", :git => "https://github.com/applideveloper/SwiftActors"
 
   target 'SwiftActorsSampleTests' do
     inherit! :search_paths

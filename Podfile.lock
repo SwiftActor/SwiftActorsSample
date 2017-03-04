@@ -4,27 +4,35 @@ PODS:
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
   - SwiftActor (0.0.1)
+  - SwiftActors (0.0.1)
 
 DEPENDENCIES:
   - Himotoki (~> 3.0)
   - R.swift
   - SwiftActor (from `https://github.com/SwiftActor/SwiftActor`)
+  - SwiftActors (from `https://github.com/applideveloper/SwiftActors`)
 
 EXTERNAL SOURCES:
   SwiftActor:
     :git: https://github.com/SwiftActor/SwiftActor
+  SwiftActors:
+    :git: https://github.com/applideveloper/SwiftActors
 
 CHECKOUT OPTIONS:
   SwiftActor:
     :commit: 822e1fdef2aac9434aab209f6b3ddfa8bdad4b75
     :git: https://github.com/SwiftActor/SwiftActor
+  SwiftActors:
+    :commit: dcf4492622e3b5466a057a5a2af866e8581d2459
+    :git: https://github.com/applideveloper/SwiftActors
 
 SPEC CHECKSUMS:
   Himotoki: 85fda41d4d0e14f7228317a3b474175cdfb8f515
   R.swift: 207a372a2b5977caef440c696a368009460641d1
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   SwiftActor: 990c89af36de9dffe486f605bfeb509aea79963c
+  SwiftActors: 6672717bfbf0e351b1ec038e2dacddf481bf441a
 
-PODFILE CHECKSUM: b9192374a157f7410d72f947bcd7942f3d78b66c
+PODFILE CHECKSUM: f6ab00b91d071caba8e2c0f3234d840ade8d13e4
 
 COCOAPODS: 1.2.0
