@@ -7,29 +7,100 @@
 //
 
 import UIKit
+import SwiftActors
 
 class WeatherViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var localWeatherArray = [LocalWeather]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 143
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // self.tableView.backgroundColor = UIColor.lightGray
+        
+        self.tableView.register(
+            UINib(
+                nibName : WeatherTableViewCell.className,
+                bundle : nil
+            ),
+            forCellReuseIdentifier: WeatherTableViewCell.className
+        )
+        
+        var parameters = [String : Any]()
+        parameters["q"] = "London,uk"
+        parameters["appid"] = "b1b15e88fa797225412429c1c50c122a1"
+        
+        let localWeatherFetcher = LocalWeatherFetcher(
+            path: "/data/2.5/weather",
+            method: .get,
+            parameters: parameters
+        )
+        
+        localWeatherFetcher.request(success: { (localWeather: LocalWeather) in
+            
+            self.localWeatherArray.append(localWeather)
+            print(self.localWeatherArray)
+            print(self.localWeatherArray.count)
+            self.tableView.reloadData()
+        }) { (error: Error?) in
+            if let error = error {
+                // FIXME: send error report
+                print(error.localizedDescription)
+            }
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension WeatherViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return localWeatherArray.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let weatherTableViewCell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.className) as? WeatherTableViewCell else {
+            // FIXME: send error report
+            return UITableViewCell()
+        }
+        
+        let localWeather = localWeatherArray[indexPath.row]
+        
+        weatherTableViewCell.cityNameLabel.text = localWeather.name
+        
+        if let main = localWeather.main,
+        let temp_max =  main.temp_max {
+            weatherTableViewCell.maxTemperatureLabel.text = String(temp_max)
+        } else {
+            weatherTableViewCell.maxTemperatureLabel.text = ""
+        }
+        
+        if let main = localWeather.main,
+        let temp_min =  main.temp_min {
+            weatherTableViewCell.minTemperatureLabel.text = String(temp_min)
+        } else {
+            weatherTableViewCell.minTemperatureLabel.text = ""
+        }
+        
+        return weatherTableViewCell
+    }
+}
 
+
+extension WeatherViewController: UITableViewDelegate {
+    
 }
