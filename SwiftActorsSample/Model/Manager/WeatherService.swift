@@ -9,6 +9,7 @@
 import Foundation
 import SwiftActors
 import ObjectMapper
+import Keys.SwiftActorsSampleKeys
 
 class WeatherService {
     
@@ -21,12 +22,12 @@ class WeatherService {
     var weatherListModel = WeatherListModel()
     
     var weatherUrlArray = [
-        "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1",
-        "http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=b1b15e88fa797225412429c1c50c122a1",
-        "http://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&appid=b1b15e88fa797225412429c1c50c122a1",
-        "http://api.openweathermap.org/data/2.5/weather?q=San+Francisco,us&appid=b1b15e88fa797225412429c1c50c122a1",
-        "http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=b1b15e88fa797225412429c1c50c122a1",
-        "http://api.openweathermap.org/data/2.5/weather?q=Berlin,de&appid=b1b15e88fa797225412429c1c50c122a1",
+        "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=" + SwiftActorsSampleKeys().openWeatherApiKey,
+        "http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=" + SwiftActorsSampleKeys().openWeatherApiKey,
+        "http://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&appid=" + SwiftActorsSampleKeys().openWeatherApiKey,
+        "http://api.openweathermap.org/data/2.5/weather?q=San+Francisco,us&appid=" + SwiftActorsSampleKeys().openWeatherApiKey,
+        "http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=" + SwiftActorsSampleKeys().openWeatherApiKey,
+        "http://api.openweathermap.org/data/2.5/weather?q=Berlin,de&appid=" + SwiftActorsSampleKeys().openWeatherApiKey,
     ]
     
     init(tableView:UITableView) {
@@ -130,7 +131,7 @@ class WeatherDownloaderActor : Actor {
 
             WeatherFetcher()
                 .getResponse(url: weatherFetchMessage.url)
-                .success { (localWeather :LocalWeather?) -> Void in
+                .success { (localWeather: LocalWeather?) -> Void in
                     if let localWeather = localWeather {
                         
                         if let tableViewUpdateActor = self.tableViewUpdateActor {
